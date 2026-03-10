@@ -1,19 +1,15 @@
 {
-  "version": "1.0.0",
-  "name": "Golden Tur",
-  "theme_name": "Golden Tur",
+  "name": {
+    "ar": "الطور الذهبي",
+    "en": "Golden Tur"
+  },
   "repository": "https://github.com/ibra2000sd/golden-tur",
-  "repo_url": "https://github.com/ibra2000sd/golden-tur",
+  "author_email": "ibrahim@nabtiq.com",
   "support_url": "https://github.com/ibra2000sd/golden-tur",
-  "settings": [
-    {
-      "id": "topnav_is_dark",
-      "type": "boolean",
-      "label": "Dark Navigation",
-      "format": "switch",
-      "selected": true
-    }
-  ],
+  "description": {
+    "ar": "ثيم فاخر داكن لمتاجر اللحوم المميزة",
+    "en": "A dark luxury theme for premium meat stores"
+  },
   "features": [
     "component-featured-products",
     "component-products-slider",
@@ -22,6 +18,28 @@
     "component-store-features",
     "component-random-testimonials",
     "filters"
+  ],
+  "settings": [
+    {
+      "id": "topnav_is_dark",
+      "type": "boolean",
+      "icon": "sicon-toggle-off",
+      "label": "شريط علوي داكن",
+      "format": "switch",
+      "required": false,
+      "value": true,
+      "selected": true
+    },
+    {
+      "id": "footer_is_dark",
+      "type": "boolean",
+      "icon": "sicon-toggle-off",
+      "label": "الوضع الداكن",
+      "format": "switch",
+      "required": false,
+      "value": true,
+      "selected": true
+    }
   ],
   "components": []
 }
