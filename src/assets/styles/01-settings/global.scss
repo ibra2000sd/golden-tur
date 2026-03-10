@@ -1,29 +1,81 @@
+// Responsive breakpoints mixin
+@mixin mobile-xs {
+  @media(max-width: 400px) { @content; }
+}
+@mixin mobile {
+  @media(max-width: 480px) { @content; }
+}
+@mixin tablet {
+  @media(max-width: 768px) { @content; }
+}
+@mixin desktop {
+  @media(max-width: 992px) { @content; }
+}
+@mixin large-desktop {
+  @media(max-width: 1200px) { @content; }
+}
 
-// Colors
 $main-color: var(--color-primary);
 $infinte-color: var(--infinte-color);
 $main-text-color: var(--main-text-color);
 
 :root {
-  --infinte-color: #c9c9c9;
-  --main-text-color: #231f1e;
-  --main-text-color-dark: #2b2d34;
-
-  /* current */
-  --color-primary: #5cd5c4;
-  --color-primary: #414042;
-  --color-primary-d: #272628;
-  --color-primary-l: #676668;
-  --color-primary-reverse: #ff6767;
-  --color-text: #7c8082;
-  --bg-gray: #c6c7ce1a;
-  --color-grey: #f5f7f9;
-  --color-light-grey: #eeeeee;
-  /* font-size */
-  --font-sm: 0.8685714286rem;
-  /* font-family: ; */
-  --font-main: "DINNextLTArabic";
-
-  /* plugins */
-  --mm-ocd-width: calc(100% - 51px);
+  --color-primary:          #C9973A;
+  --color-primary-d:        #8A6520;
+  --color-primary-l:        #E5BE7A;
+  --color-primary-reverse:  #9B1C1C;
+  --bg-body:                #080807;
+  --bg-card:                #111110;
+  --bg-section:             #1A0A05;
+  --bg-gray:                rgba(201,151,58,0.06);
+  --color-grey:             #111110;
+  --color-light-grey:       #1A1A18;
+  --main-text-color:        #F2EAD8;
+  --main-text-color-dark:   #F2EAD8;
+  --color-text:             #7A7468;
+  --infinte-color:          #C9973A;
+  --border-color:           rgba(201,151,58,0.15);
+  --border-color-md:        rgba(201,151,58,0.28);
+  --font-sm:                0.8685714286rem;
+  --font-main:              "Noto Naskh Arabic", "DINNextLTArabic", serif;
+  --mm-ocd-width:           calc(100% - 51px);
 }
+
+body {
+  background-color: var(--bg-body) !important;
+  color: var(--main-text-color) !important;
+}
+.bg-white, .card {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  color: var(--main-text-color) !important;
+}
+header, nav.navbar {
+  background-color: rgba(8,8,7,0.92) !important;
+  backdrop-filter: blur(24px) !important;
+  border-bottom: 1px solid rgba(201,151,58,0.15) !important;
+}
+h1,h2,h3,h4,h5,h6 { color: var(--main-text-color) !important; }
+footer {
+  background-color: var(--bg-section) !important;
+  border-top: 3px solid var(--color-primary) !important;
+}
+input, textarea, select {
+  background-color: var(--bg-section) !important;
+  border-color: var(--border-color) !important;
+  color: var(--main-text-color) !important;
+}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-body); }
+::-webkit-scrollbar-thumb { background: var(--color-primary-reverse); border-radius: 2px; }
+::selection { background: var(--color-primary); color: #080807; }
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=Cormorant+Garamond:wght@400;600&display=swap');
+
+h1, h2, .section-title {
+  font-family: 'Amiri', var(--font-main), serif !important;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

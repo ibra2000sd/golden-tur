@@ -1,0 +1,42 @@
+/* Golden Tur — Component Overrides */
+
+.product-card, [class*="product-card"] {
+  background: #111110 !important;
+  border: 1px solid rgba(201,151,58,0.1) !important;
+  transition: all .3s !important;
+}
+.product-card:hover {
+  border-color: rgba(201,151,58,0.4) !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5) !important;
+}
+.product-card__image, [class*="product-image"] {
+  background: #ffffff !important;
+}
+[class*="price"] {
+  color: #C9973A !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+}
+salla-add-to-cart, .add-to-cart, [class*="add-to-cart"] {
+  background: #9B1C1C !important;
+  color: #F2EAD8 !important;
+  border: none !important;
+}
+[class*="announcement"] {
+  background-color: #9B1C1C !important;
+  color: #F2EAD8 !important;
+}
+[class*="store-features"] {
+  background: #111110 !important;
+  border-top: 1px solid rgba(201,151,58,0.12) !important;
+  border-bottom: 1px solid rgba(201,151,58,0.12) !important;
+}
+footer h4, footer h5 { color: #C9973A !important; }
+footer a { color: #7A7468 !important; }
+footer a:hover { color: #E5BE7A !important; }
+[class*="rating"] i, .stars { color: #C9973A !important; }
+salla-side-menu, .cart-drawer {
+  background: #111110 !important;
+}
